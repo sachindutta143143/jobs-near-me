@@ -408,4 +408,8 @@ if __name__ == "__main__":
             time.sleep(1800)
 
     threading.Thread(target=auto_scrape, daemon=True).start()
+  if __name__ == "__main__":
+    import os
+
+    PORT = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=PORT)
